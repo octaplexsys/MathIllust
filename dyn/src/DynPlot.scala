@@ -60,5 +60,29 @@ object DynPlot{
     }
 
     drawPath(testPath, 200)
+
+    def animatePath(xys: Seq[(Double, Double)], scale: Double, interval: Double = 20) = {
+      var i = 1
+      val animID =
+        dom.window.setInterval(
+        () =>
+          {
+            i += 1
+            // console.log(i)
+            drawPath(xys.take(i), scale)
+          },
+          interval
+      )
+      animID
+    }
+
+    val id = animatePath(testPath, 100, 1)
+
+    dom.window.onclick = {
+      (event) =>
+        dom.window.clearInterval(id)
+        console.log(event.pageX)
+        console.log(event.pageY)
+      }
   }
 }
