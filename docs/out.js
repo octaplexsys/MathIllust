@@ -1523,17 +1523,17 @@ $c_Ldyn_DynPlot$.prototype.main__V = (function() {
   cnvs.height = height;
   cnvs.width = width;
   var ctx = cnvs.getContext("2d");
-  var a = $m_sr_IntRef$().create__I__sr_IntRef(1);
-  var b = $m_sr_IntRef$().create__I__sr_IntRef(0);
-  var c = $m_sr_IntRef$().create__I__sr_IntRef(0);
-  var d = $m_sr_IntRef$().create__I__sr_IntRef((-1));
+  var a = $m_sr_DoubleRef$().create__D__sr_DoubleRef(1.0);
+  var b = $m_sr_DoubleRef$().create__D__sr_DoubleRef(0.0);
+  var c = $m_sr_DoubleRef$().create__D__sr_DoubleRef(0.0);
+  var d = $m_sr_DoubleRef$().create__D__sr_DoubleRef((-1.0));
   var scale = $m_sr_IntRef$().create__I__sr_IntRef(100);
   var step = $m_sr_DoubleRef$().create__D__sr_DoubleRef(0.01);
   var interval = $m_sr_IntRef$().create__I__sr_IntRef(10);
-  var aI = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().size__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("5", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().value__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(a.elem$1, $m_Lscalatags_JsDom$all$().intAttr__Lscalatags_generic_AttrValue())])).render__Lorg_scalajs_dom_raw_Element();
-  var bI = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().size__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("5", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().value__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(b.elem$1, $m_Lscalatags_JsDom$all$().intAttr__Lscalatags_generic_AttrValue())])).render__Lorg_scalajs_dom_raw_Element();
-  var cI = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().size__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("5", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().value__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(c.elem$1, $m_Lscalatags_JsDom$all$().intAttr__Lscalatags_generic_AttrValue())])).render__Lorg_scalajs_dom_raw_Element();
-  var dI = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().size__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("5", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().value__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(d.elem$1, $m_Lscalatags_JsDom$all$().intAttr__Lscalatags_generic_AttrValue())])).render__Lorg_scalajs_dom_raw_Element();
+  var aI = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().size__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("5", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().value__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(a.elem$1, $m_Lscalatags_JsDom$all$().doubleAttr__Lscalatags_generic_AttrValue())])).render__Lorg_scalajs_dom_raw_Element();
+  var bI = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().size__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("5", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().value__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(b.elem$1, $m_Lscalatags_JsDom$all$().doubleAttr__Lscalatags_generic_AttrValue())])).render__Lorg_scalajs_dom_raw_Element();
+  var cI = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().size__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("5", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().value__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(c.elem$1, $m_Lscalatags_JsDom$all$().doubleAttr__Lscalatags_generic_AttrValue())])).render__Lorg_scalajs_dom_raw_Element();
+  var dI = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().size__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("5", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().value__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(d.elem$1, $m_Lscalatags_JsDom$all$().doubleAttr__Lscalatags_generic_AttrValue())])).render__Lorg_scalajs_dom_raw_Element();
   var tab = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().$class__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("col-md-3", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().h3__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("Matrix:")])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().table__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().$class__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("table", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().tr__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().td__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().strong__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("a = ")])), $m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(aI)])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().td__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().strong__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("b = ")])), $m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(bI)]))])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().tr__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().td__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().strong__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("c = ")])), $m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(cI)])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().td__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().strong__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("d = ")])), $m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(dI)]))]))]))]));
   jsDiv.appendChild($as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(cnvs), tab])).render__Lorg_scalajs_dom_raw_Element());
   this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height, width, ctx);
@@ -1549,25 +1549,25 @@ $c_Ldyn_DynPlot$.prototype.main__V = (function() {
   aI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, aI$1, dyn$2, id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
-      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$5__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_IntRef__sr_IntRef__sr_IntRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, aI$1, dyn$2, id$1)
+      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$5__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, aI$1, dyn$2, id$1)
     })
   })(height, width, ctx, a, b, c, d, aI, dyn, id);
   bI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, bI$1, dyn$2, id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
-      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$6__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_IntRef__sr_IntRef__sr_IntRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, bI$1, dyn$2, id$1)
+      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$6__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, bI$1, dyn$2, id$1)
     })
   })(height, width, ctx, a, b, c, d, bI, dyn, id);
   cI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, cI$1, dyn$2, id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
-      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$7__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_IntRef__sr_IntRef__sr_IntRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, cI$1, dyn$2, id$1)
+      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$7__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, cI$1, dyn$2, id$1)
     })
   })(height, width, ctx, a, b, c, d, cI, dyn, id);
   dI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dI$1, dyn$2, id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
-      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$8__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_IntRef__sr_IntRef__sr_IntRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dI$1, dyn$2, id$1)
+      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$8__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dI$1, dyn$2, id$1)
     })
   })(height, width, ctx, a, b, c, d, dI, dyn, id);
   dyn.elem$1 = new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a.elem$1, b.elem$1, c.elem$1, d.elem$1);
@@ -1641,27 +1641,27 @@ $c_Ldyn_DynPlot$.prototype.cleft$1__p1__Lorg_scalajs_dom_raw_HTMLCanvasElement__
 $c_Ldyn_DynPlot$.prototype.stop$1__p1__sr_IntRef__V = (function(id$1) {
   $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().clearInterval(id$1.elem$1)
 });
-$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$5__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_IntRef__sr_IntRef__sr_IntRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, aI$1, dyn$2, id$1) {
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$5__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, aI$1, dyn$2, id$1) {
   this.stop$1__p1__sr_IntRef__V(id$1);
-  a$1.elem$1 = new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T($as_T(aI$1.value))).toInt__I();
+  a$1.elem$1 = new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T($as_T(aI$1.value))).toDouble__D();
   this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height$1, width$1, ctx$1);
   dyn$2.elem$1 = new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a$1.elem$1, b$1.elem$1, c$1.elem$1, d$1.elem$1)
 });
-$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$6__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_IntRef__sr_IntRef__sr_IntRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, bI$1, dyn$2, id$1) {
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$6__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, bI$1, dyn$2, id$1) {
   this.stop$1__p1__sr_IntRef__V(id$1);
-  b$1.elem$1 = new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T($as_T(bI$1.value))).toInt__I();
+  b$1.elem$1 = new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T($as_T(bI$1.value))).toDouble__D();
   this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height$1, width$1, ctx$1);
   dyn$2.elem$1 = new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a$1.elem$1, b$1.elem$1, c$1.elem$1, d$1.elem$1)
 });
-$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$7__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_IntRef__sr_IntRef__sr_IntRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, cI$1, dyn$2, id$1) {
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$7__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, cI$1, dyn$2, id$1) {
   this.stop$1__p1__sr_IntRef__V(id$1);
-  c$1.elem$1 = new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T($as_T(cI$1.value))).toInt__I();
+  c$1.elem$1 = new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T($as_T(cI$1.value))).toDouble__D();
   this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height$1, width$1, ctx$1);
   dyn$2.elem$1 = new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a$1.elem$1, b$1.elem$1, c$1.elem$1, d$1.elem$1)
 });
-$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$8__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_IntRef__sr_IntRef__sr_IntRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dI$1, dyn$2, id$1) {
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$8__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dI$1, dyn$2, id$1) {
   this.stop$1__p1__sr_IntRef__V(id$1);
-  d$1.elem$1 = new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T($as_T(dI$1.value))).toInt__I();
+  d$1.elem$1 = new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T($as_T(dI$1.value))).toDouble__D();
   this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height$1, width$1, ctx$1);
   dyn$2.elem$1 = new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a$1.elem$1, b$1.elem$1, c$1.elem$1, d$1.elem$1)
 });
@@ -6135,9 +6135,6 @@ $h_jl_Character$.prototype = $c_jl_Character$.prototype;
 $c_jl_Character$.prototype.valueOf__C__jl_Character = (function(charValue) {
   return new $c_jl_Character().init___C(charValue)
 });
-$c_jl_Character$.prototype.digit__C__I__I = (function(c, radix) {
-  return (((radix > 36) || (radix < 2)) ? (-1) : ((((c >= 48) && (c <= 57)) && (((c - 48) | 0) < radix)) ? ((c - 48) | 0) : ((((c >= 65) && (c <= 90)) && (((c - 65) | 0) < ((radix - 10) | 0))) ? ((((c - 65) | 0) + 10) | 0) : ((((c >= 97) && (c <= 122)) && (((c - 97) | 0) < ((radix - 10) | 0))) ? ((((c - 97) | 0) + 10) | 0) : ((((c >= 65313) && (c <= 65338)) && (((c - 65313) | 0) < ((radix - 10) | 0))) ? ((((c - 65313) | 0) + 10) | 0) : ((((c >= 65345) && (c <= 65370)) && (((c - 65345) | 0) < ((radix - 10) | 0))) ? ((((c - 65313) | 0) + 10) | 0) : (-1)))))))
-});
 $c_jl_Character$.prototype.toString__C__T = (function(c) {
   return $as_T($m_sjs_js_Dynamic$().global__sjs_js_Dynamic().String.fromCharCode($m_sjs_js_Any$().fromInt__I__sjs_js_Any(c)))
 });
@@ -6175,6 +6172,23 @@ function $h_jl_Double$() {
   /*<skip>*/
 }
 $h_jl_Double$.prototype = $c_jl_Double$.prototype;
+$c_jl_Double$.prototype.doubleStrPat$lzycompute__p1__sjs_js_RegExp = (function() {
+  if ((!this.bitmap$0$1)) {
+    this.doubleStrPat$1 = new $g.RegExp("^[\\x00-\\x20]*[+-]?(NaN|Infinity|(\\d+\\.?\\d*|\\.\\d+)([eE][+-]?\\d+)?)[fFdD]?[\\x00-\\x20]*$");
+    this.bitmap$0$1 = true
+  };
+  return this.doubleStrPat$1
+});
+$c_jl_Double$.prototype.doubleStrPat__p1__sjs_js_RegExp = (function() {
+  return ((!this.bitmap$0$1) ? this.doubleStrPat$lzycompute__p1__sjs_js_RegExp() : this.doubleStrPat$1)
+});
+$c_jl_Double$.prototype.parseDouble__T__D = (function(s) {
+  if ($uZ(this.doubleStrPat__p1__sjs_js_RegExp().test(s))) {
+    return $uD($m_sjs_js_Dynamic$().global__sjs_js_Dynamic().parseFloat($m_sjs_js_Any$().fromString__T__sjs_js_Any(s)))
+  } else {
+    throw new $c_jl_NumberFormatException().init___T(new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["For input string: \"", "\""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([s])))
+  }
+});
 $c_jl_Double$.prototype.toString__D__T = (function(d) {
   return ("" + d)
 });
@@ -6307,31 +6321,6 @@ function $h_jl_Integer$() {
   /*<skip>*/
 }
 $h_jl_Integer$.prototype = $c_jl_Integer$.prototype;
-$c_jl_Integer$.prototype.parseInt__T__I = (function(s) {
-  return this.parseInt__T__I__I(s, 10)
-});
-$c_jl_Integer$.prototype.parseInt__T__I__I = (function(s, radix) {
-  return this.parseIntImpl__p1__T__I__Z__I(s, radix, true)
-});
-$c_jl_Integer$.prototype.parseIntImpl__p1__T__I__Z__I = (function(s, radix, signed) {
-  if (((((s === null) || (new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T(s)).size__I() === 0)) || (radix < 2)) || (radix > 36))) {
-    this.fail$1__p1__T__sr_Nothing$(s)
-  } else {
-    var i = (((signed && ($m_sci_StringOps$().apply$extension__T__I__C($m_s_Predef$().augmentString__T__T(s), 0) === 45)) || ($m_sci_StringOps$().apply$extension__T__I__C($m_s_Predef$().augmentString__T__T(s), 0) === 43)) ? 1 : 0);
-    if ((new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T(s)).size__I() <= i)) {
-      this.fail$1__p1__T__sr_Nothing$(s)
-    } else {
-      while ((i < new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T(s)).size__I())) {
-        if (($m_jl_Character$().digit__C__I__I($m_sci_StringOps$().apply$extension__T__I__C($m_s_Predef$().augmentString__T__T(s), i), radix) < 0)) {
-          this.fail$1__p1__T__sr_Nothing$(s)
-        };
-        i = ((i + 1) | 0)
-      };
-      var res = $uD($m_sjs_js_Dynamic$().global__sjs_js_Dynamic().parseInt($m_sjs_js_Any$().fromString__T__sjs_js_Any(s), $m_sjs_js_Any$().fromInt__I__sjs_js_Any(radix)));
-      return (($isNaN($m_s_Predef$().double2Double__D__jl_Double(res)) || this.isOutOfBounds$1__p1__Z__D__Z(signed, res)) ? this.fail$1__p1__T__sr_Nothing$(s) : (signed ? $doubleToInt(res) : this.java$lang$Integer$$asInt__D__I(res)))
-    }
-  }
-});
 $c_jl_Integer$.prototype.toString__I__T = (function(i) {
   return ("" + i)
 });
@@ -6373,15 +6362,6 @@ $c_jl_Integer$.prototype.toHexString__I__T = (function(i) {
 });
 $c_jl_Integer$.prototype.java$lang$Integer$$toStringBase__I__I__T = (function(i, base) {
   return $as_T($m_sjs_js_JSNumberOps$().enableJSNumberOps__D__sjs_js_JSNumberOps($m_sjs_js_JSNumberOps$ExtOps$().toUint$extension__sjs_js_Dynamic__D($m_sjs_js_JSNumberOps$().enableJSNumberExtOps__I__sjs_js_Dynamic(i))).toString(base))
-});
-$c_jl_Integer$.prototype.java$lang$Integer$$asInt__D__I = (function(n) {
-  return $uI((n | 0))
-});
-$c_jl_Integer$.prototype.fail$1__p1__T__sr_Nothing$ = (function(s$1) {
-  throw new $c_jl_NumberFormatException().init___T(new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["For input string: \"", "\""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([s$1])))
-});
-$c_jl_Integer$.prototype.isOutOfBounds$1__p1__Z__D__Z = (function(signed$1, res$1) {
-  return (signed$1 ? ((res$1 > 2147483647) || (res$1 < (-2147483648))) : ((res$1 > new $c_sjsr_RuntimeLong().init___I__I((-1), 0).toDouble__D()) || (res$1 < 0)))
 });
 $c_jl_Integer$.prototype.init___ = (function() {
   $c_O.prototype.init___.call(this);
@@ -14414,8 +14394,8 @@ function $f_sci_StringLike__r__s_util_matching_Regex($thiz) {
 function $f_sci_StringLike__r__sc_Seq__s_util_matching_Regex($thiz, groupNames) {
   return new $c_s_util_matching_Regex().init___T__sc_Seq($thiz.toString__T(), groupNames)
 }
-function $f_sci_StringLike__toInt__I($thiz) {
-  return $m_jl_Integer$().parseInt__T__I($thiz.toString__T())
+function $f_sci_StringLike__toDouble__D($thiz) {
+  return $m_jl_Double$().parseDouble__T__D($thiz.toString__T())
 }
 function $f_sci_StringLike__$$init$__V($thiz) {
   /*<skip>*/
@@ -14535,8 +14515,8 @@ $c_sci_StringOps.prototype.r__s_util_matching_Regex = (function() {
 $c_sci_StringOps.prototype.r__sc_Seq__s_util_matching_Regex = (function(groupNames) {
   return $f_sci_StringLike__r__sc_Seq__s_util_matching_Regex(this, groupNames)
 });
-$c_sci_StringOps.prototype.toInt__I = (function() {
-  return $f_sci_StringLike__toInt__I(this)
+$c_sci_StringOps.prototype.toDouble__D = (function() {
+  return $f_sci_StringLike__toDouble__D(this)
 });
 $c_sci_StringOps.prototype.scala$collection$IndexedSeqOptimized$$super$sameElements__sc_GenIterable__Z = (function(that) {
   return $f_sc_IterableLike__sameElements__sc_GenIterable__Z(this, that)
@@ -15477,8 +15457,8 @@ $c_Lscalatags_JsDom$all$.prototype.scalatags$JsDom$Aggregate$$undsetter$und$Tag$
 $c_Lscalatags_JsDom$all$.prototype.stringAttr__Lscalatags_generic_AttrValue = (function() {
   return this.stringAttr$1
 });
-$c_Lscalatags_JsDom$all$.prototype.intAttr__Lscalatags_generic_AttrValue = (function() {
-  return this.intAttr$1
+$c_Lscalatags_JsDom$all$.prototype.doubleAttr__Lscalatags_generic_AttrValue = (function() {
+  return this.doubleAttr$1
 });
 $c_Lscalatags_JsDom$all$.prototype.stringStyle__Lscalatags_generic_StyleValue = (function() {
   return this.stringStyle$1

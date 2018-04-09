@@ -38,10 +38,10 @@ object DynPlot{
     cnvs.width = width;
     implicit val ctx = cnvs.getContext("2d").asInstanceOf[dom.CanvasRenderingContext2D]
 
-    var a = 1
-    var b = 0
-    var c = 0
-    var d = -1
+    var a = 1.0
+    var b = 0.0
+    var c = 0.0
+    var d = -1.0
 
     var scale = 100
     var step = 0.01
@@ -161,14 +161,14 @@ object DynPlot{
 
     aI.onchange = (event: dom.Event) => {
       stop()
-      a = aI.value.toInt
+      a = aI.value.toDouble
       init()
       dyn = Matrix(a, b, c, d)
     }
 
     bI.onchange = (event: dom.Event) => {
       stop()
-      b = bI.value.toInt
+      b = bI.value.toDouble
       init()
       dyn = Matrix(a, b, c, d)
     }
@@ -176,14 +176,14 @@ object DynPlot{
 
     cI.onchange = (event: dom.Event) => {
       stop()
-      c = cI.value.toInt
+      c = cI.value.toDouble
       init()
       dyn = Matrix(a, b, c, d)
     }
 
     dI.onchange = (event: dom.Event) => {
       stop()
-      d = dI.value.toInt
+      d = dI.value.toDouble
       init()
       dyn = Matrix(a, b, c, d)
     }
