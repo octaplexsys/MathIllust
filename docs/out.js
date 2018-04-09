@@ -1535,7 +1535,10 @@ $c_Ldyn_DynPlot$.prototype.main__V = (function() {
   var cI = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().size__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("5", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().value__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(c.elem$1, $m_Lscalatags_JsDom$all$().doubleAttr__Lscalatags_generic_AttrValue())])).render__Lorg_scalajs_dom_raw_Element();
   var dI = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().size__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("5", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().value__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(d.elem$1, $m_Lscalatags_JsDom$all$().doubleAttr__Lscalatags_generic_AttrValue())])).render__Lorg_scalajs_dom_raw_Element();
   var tab = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().$class__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("col-md-3", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().h3__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("Matrix:")])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().table__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().$class__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("table", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().tr__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().td__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().strong__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("a = ")])), $m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(aI)])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().td__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().strong__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("b = ")])), $m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(bI)]))])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().tr__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().td__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().strong__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("c = ")])), $m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(cI)])), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().td__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().strong__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("d = ")])), $m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(dI)]))]))]))]));
-  jsDiv.appendChild($as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(cnvs), tab])).render__Lorg_scalajs_dom_raw_Element());
+  var pause = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().button__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().$class__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("btn btn-danger", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("Stop")])).render__Lorg_scalajs_dom_raw_Element();
+  var clear = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().button__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().$class__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("btn btn-warning", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("clear")])).render__Lorg_scalajs_dom_raw_Element();
+  var resume = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().button__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().$class__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("btn btn-success", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("continue")])).render__Lorg_scalajs_dom_raw_Element();
+  jsDiv.appendChild($as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(cnvs), tab, $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().$class__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("row", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(pause), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag(" ")])), $m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(clear), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag(" ")])), $m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(resume)]))])).render__Lorg_scalajs_dom_raw_Element());
   this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height, width, ctx);
   var testPath = $as_sci_IndexedSeq($m_sr_RichInt$().to$extension0__I__I__sci_Range$Inclusive($m_s_Predef$().intWrapper__I__I(1), 1000).map__F1__scg_CanBuildFrom__O(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this) {
     return (function(n$2) {
@@ -1570,11 +1573,29 @@ $c_Ldyn_DynPlot$.prototype.main__V = (function() {
       $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$8__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dI$1, dyn$2, id$1)
     })
   })(height, width, ctx, a, b, c, d, dI, dyn, id);
+  pause.onclick = (function(id$1) {
+    return (function(arg1$2) {
+      var arg1 = arg1$2;
+      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$9__Lorg_scalajs_dom_raw_MouseEvent__sr_IntRef__V(arg1, id$1)
+    })
+  })(id);
+  resume.onclick = (function(height$1, width$1, ctx$1, scale$2, step$1, interval$1, point$1, dyn$2, id$1) {
+    return (function(arg1$2) {
+      var arg1 = arg1$2;
+      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$10__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_DoubleRef__sr_IntRef__sr_ObjectRef__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, scale$2, step$1, interval$1, point$1, dyn$2, id$1)
+    })
+  })(height, width, ctx, scale, step, interval, point, dyn, id);
+  clear.onclick = (function(height$1, width$1, ctx$1) {
+    return (function(arg1$2) {
+      var arg1 = arg1$2;
+      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$11__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(arg1, height$1, width$1, ctx$1)
+    })
+  })(height, width, ctx);
   dyn.elem$1 = new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a.elem$1, b.elem$1, c.elem$1, d.elem$1);
   cnvs.onclick = (function(height$1, width$1, cnvs$1, ctx$1, scale$2, step$1, interval$1, point$1, dyn$2, id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
-      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$9__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_HTMLCanvasElement__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_DoubleRef__sr_IntRef__sr_ObjectRef__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, cnvs$1, ctx$1, scale$2, step$1, interval$1, point$1, dyn$2, id$1)
+      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$12__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_HTMLCanvasElement__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_DoubleRef__sr_IntRef__sr_ObjectRef__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, cnvs$1, ctx$1, scale$2, step$1, interval$1, point$1, dyn$2, id$1)
     })
   })(height, width, cnvs, ctx, scale, step, interval, point, dyn, id)
 });
@@ -1665,7 +1686,16 @@ $c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$8__Lorg_scalajs_dom_raw_Ev
   this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height$1, width$1, ctx$1);
   dyn$2.elem$1 = new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a$1.elem$1, b$1.elem$1, c$1.elem$1, d$1.elem$1)
 });
-$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$9__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_HTMLCanvasElement__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_DoubleRef__sr_IntRef__sr_ObjectRef__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, cnvs$1, ctx$1, scale$2, step$1, interval$1, point$1, dyn$2, id$1) {
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$9__Lorg_scalajs_dom_raw_MouseEvent__sr_IntRef__V = (function(x$5, id$1) {
+  this.stop$1__p1__sr_IntRef__V(id$1)
+});
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$10__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_DoubleRef__sr_IntRef__sr_ObjectRef__sr_ObjectRef__sr_IntRef__V = (function(x$6, height$1, width$1, ctx$1, scale$2, step$1, interval$1, point$1, dyn$2, id$1) {
+  id$1.elem$1 = this.animateDyn$1__p1__T2__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_DoubleRef__sr_IntRef__sr_ObjectRef__sr_ObjectRef__I($as_T2(point$1.elem$1), height$1, width$1, ctx$1, scale$2, step$1, interval$1, point$1, dyn$2)
+});
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$11__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V = (function(x$7, height$1, width$1, ctx$1) {
+  this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height$1, width$1, ctx$1)
+});
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$12__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_HTMLCanvasElement__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_DoubleRef__sr_IntRef__sr_ObjectRef__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, cnvs$1, ctx$1, scale$2, step$1, interval$1, point$1, dyn$2, id$1) {
   this.stop$1__p1__sr_IntRef__V(id$1);
   var xpos = ($uD(event.pageX) - this.cleft$1__p1__Lorg_scalajs_dom_raw_HTMLCanvasElement__D(cnvs$1));
   var ypos = ($uD(event.pageY) - this.ctop$1__p1__Lorg_scalajs_dom_raw_HTMLCanvasElement__D(cnvs$1));
@@ -8237,6 +8267,9 @@ function $f_Lscalatags_jsdom_Tags__div__Lscalatags_generic_TypedTag($thiz) {
 function $f_Lscalatags_jsdom_Tags__strong__Lscalatags_generic_TypedTag($thiz) {
   return $thiz.typedTag__T__Z__Lscalatags_generic_Namespace__Lscalatags_generic_TypedTag("strong", $thiz.typedTag$default$2__Z(), $m_Lscalatags_generic_Namespace$().htmlNamespaceConfig__Lscalatags_generic_Namespace())
 }
+function $f_Lscalatags_jsdom_Tags__span__Lscalatags_generic_TypedTag($thiz) {
+  return $thiz.typedTag__T__Z__Lscalatags_generic_Namespace__Lscalatags_generic_TypedTag("span", $thiz.typedTag$default$2__Z(), $m_Lscalatags_generic_Namespace$().htmlNamespaceConfig__Lscalatags_generic_Namespace())
+}
 function $f_Lscalatags_jsdom_Tags__canvas__Lscalatags_generic_TypedTag($thiz) {
   return $thiz.typedTag__T__Z__Lscalatags_generic_Namespace__Lscalatags_generic_TypedTag("canvas", $thiz.typedTag$default$2__Z(), $m_Lscalatags_generic_Namespace$().htmlNamespaceConfig__Lscalatags_generic_Namespace())
 }
@@ -8251,6 +8284,9 @@ function $f_Lscalatags_jsdom_Tags__td__Lscalatags_generic_TypedTag($thiz) {
 }
 function $f_Lscalatags_jsdom_Tags__input__Lscalatags_generic_TypedTag($thiz) {
   return $thiz.typedTag__T__Z__Lscalatags_generic_Namespace__Lscalatags_generic_TypedTag("input", true, $m_Lscalatags_generic_Namespace$().htmlNamespaceConfig__Lscalatags_generic_Namespace())
+}
+function $f_Lscalatags_jsdom_Tags__button__Lscalatags_generic_TypedTag($thiz) {
+  return $thiz.typedTag__T__Z__Lscalatags_generic_Namespace__Lscalatags_generic_TypedTag("button", $thiz.typedTag$default$2__Z(), $m_Lscalatags_generic_Namespace$().htmlNamespaceConfig__Lscalatags_generic_Namespace())
 }
 function $f_Lscalatags_jsdom_Tags__$$init$__V($thiz) {
   /*<skip>*/
@@ -15568,6 +15604,16 @@ $c_Lscalatags_JsDom$all$.prototype.strong$lzycompute__p1__Lscalatags_JsDom$Typed
 $c_Lscalatags_JsDom$all$.prototype.strong__Lscalatags_JsDom$TypedTag = (function() {
   return (this.bitmap$0$1.$$amp__sjsr_RuntimeLong__sjsr_RuntimeLong(new $c_sjsr_RuntimeLong().init___I__I(1073741824, 0)).equals__sjsr_RuntimeLong__Z(new $c_sjsr_RuntimeLong().init___I(0)) ? this.strong$lzycompute__p1__Lscalatags_JsDom$TypedTag() : this.strong$1)
 });
+$c_Lscalatags_JsDom$all$.prototype.span$lzycompute__p1__Lscalatags_JsDom$TypedTag = (function() {
+  if (this.bitmap$0$1.$$amp__sjsr_RuntimeLong__sjsr_RuntimeLong(new $c_sjsr_RuntimeLong().init___I__I(0, 256)).equals__sjsr_RuntimeLong__Z(new $c_sjsr_RuntimeLong().init___I(0))) {
+    this.span$1 = $as_Lscalatags_JsDom$TypedTag($f_Lscalatags_jsdom_Tags__span__Lscalatags_generic_TypedTag(this));
+    this.bitmap$0$1 = this.bitmap$0$1.$$bar__sjsr_RuntimeLong__sjsr_RuntimeLong(new $c_sjsr_RuntimeLong().init___I__I(0, 256))
+  };
+  return this.span$1
+});
+$c_Lscalatags_JsDom$all$.prototype.span__Lscalatags_JsDom$TypedTag = (function() {
+  return (this.bitmap$0$1.$$amp__sjsr_RuntimeLong__sjsr_RuntimeLong(new $c_sjsr_RuntimeLong().init___I__I(0, 256)).equals__sjsr_RuntimeLong__Z(new $c_sjsr_RuntimeLong().init___I(0)) ? this.span$lzycompute__p1__Lscalatags_JsDom$TypedTag() : this.span$1)
+});
 $c_Lscalatags_JsDom$all$.prototype.canvas$lzycompute__p1__Lscalatags_JsDom$TypedTag = (function() {
   if (this.bitmap$0$1.$$amp__sjsr_RuntimeLong__sjsr_RuntimeLong(new $c_sjsr_RuntimeLong().init___I__I(0, 4194304)).equals__sjsr_RuntimeLong__Z(new $c_sjsr_RuntimeLong().init___I(0))) {
     this.canvas$1 = $as_Lscalatags_JsDom$TypedTag($f_Lscalatags_jsdom_Tags__canvas__Lscalatags_generic_TypedTag(this));
@@ -15617,6 +15663,16 @@ $c_Lscalatags_JsDom$all$.prototype.input$lzycompute__p1__Lscalatags_JsDom$TypedT
 });
 $c_Lscalatags_JsDom$all$.prototype.input__Lscalatags_JsDom$TypedTag = (function() {
   return (this.bitmap$1$1.$$amp__sjsr_RuntimeLong__sjsr_RuntimeLong(new $c_sjsr_RuntimeLong().init___I__I(128, 0)).equals__sjsr_RuntimeLong__Z(new $c_sjsr_RuntimeLong().init___I(0)) ? this.input$lzycompute__p1__Lscalatags_JsDom$TypedTag() : this.input$1)
+});
+$c_Lscalatags_JsDom$all$.prototype.button$lzycompute__p1__Lscalatags_JsDom$TypedTag = (function() {
+  if (this.bitmap$1$1.$$amp__sjsr_RuntimeLong__sjsr_RuntimeLong(new $c_sjsr_RuntimeLong().init___I__I(256, 0)).equals__sjsr_RuntimeLong__Z(new $c_sjsr_RuntimeLong().init___I(0))) {
+    this.button$1 = $as_Lscalatags_JsDom$TypedTag($f_Lscalatags_jsdom_Tags__button__Lscalatags_generic_TypedTag(this));
+    this.bitmap$1$1 = this.bitmap$1$1.$$bar__sjsr_RuntimeLong__sjsr_RuntimeLong(new $c_sjsr_RuntimeLong().init___I__I(256, 0))
+  };
+  return this.button$1
+});
+$c_Lscalatags_JsDom$all$.prototype.button__Lscalatags_JsDom$TypedTag = (function() {
+  return (this.bitmap$1$1.$$amp__sjsr_RuntimeLong__sjsr_RuntimeLong(new $c_sjsr_RuntimeLong().init___I__I(256, 0)).equals__sjsr_RuntimeLong__Z(new $c_sjsr_RuntimeLong().init___I(0)) ? this.button$lzycompute__p1__Lscalatags_JsDom$TypedTag() : this.button$1)
 });
 $c_Lscalatags_JsDom$all$.prototype.scalatags$generic$MouseEventAttrs$$undsetter$und$ondrag$und$eq__Lscalatags_generic_Attr__V = (function(x$1) {
   this.ondrag$1 = x$1
@@ -15670,6 +15726,9 @@ $c_Lscalatags_JsDom$all$.prototype.genericStyle__Lscalatags_generic_StyleValue =
 $c_Lscalatags_JsDom$all$.prototype.genericAttr__Lscalatags_generic_AttrValue = (function() {
   return this.genericAttr__Lscalatags_JsDom$GenericAttr()
 });
+$c_Lscalatags_JsDom$all$.prototype.button__Lscalatags_generic_TypedTag = (function() {
+  return this.button__Lscalatags_JsDom$TypedTag()
+});
 $c_Lscalatags_JsDom$all$.prototype.input__Lscalatags_generic_TypedTag = (function() {
   return this.input__Lscalatags_JsDom$TypedTag()
 });
@@ -15684,6 +15743,9 @@ $c_Lscalatags_JsDom$all$.prototype.table__Lscalatags_generic_TypedTag = (functio
 });
 $c_Lscalatags_JsDom$all$.prototype.canvas__Lscalatags_generic_TypedTag = (function() {
   return this.canvas__Lscalatags_JsDom$TypedTag()
+});
+$c_Lscalatags_JsDom$all$.prototype.span__Lscalatags_generic_TypedTag = (function() {
+  return this.span__Lscalatags_JsDom$TypedTag()
 });
 $c_Lscalatags_JsDom$all$.prototype.strong__Lscalatags_generic_TypedTag = (function() {
   return this.strong__Lscalatags_JsDom$TypedTag()

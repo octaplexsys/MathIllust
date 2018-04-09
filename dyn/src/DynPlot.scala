@@ -62,9 +62,20 @@ object DynPlot{
     )
   )
 
+    val pause =
+        button(`class` := "btn btn-danger")("Stop").render
+
+    val clear =
+        button(`class` := "btn btn-warning")("clear").render
+
+    val resume =
+        button(`class` := "btn btn-success")("continue").render
+
 
     jsDiv.appendChild(
-      div(cnvs, tab).render
+      div(cnvs, tab,
+        div(`class` := "row")(pause, span(" "), clear, span(" "), resume)
+      ).render
     )
 
     def init() = {
@@ -188,6 +199,11 @@ object DynPlot{
       dyn = Matrix(a, b, c, d)
     }
 
+    pause.onclick = (_) => stop()
+
+    resume.onclick = (_) => {id = animateDyn(point)}
+
+    clear.onclick = (_) => init()
 
     dyn = Matrix(a, b, c, d)
 
