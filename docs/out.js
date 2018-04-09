@@ -1546,25 +1546,25 @@ $c_Ldyn_DynPlot$.prototype.main__V = (function() {
   var point = $m_sr_ObjectRef$().create__O__sr_ObjectRef(new $c_s_Tuple2$mcDD$sp().init___D__D(0.0, 0.0));
   var dyn = $m_sr_ObjectRef$().create__O__sr_ObjectRef(new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a.elem$1, b.elem$1, c.elem$1, d.elem$1));
   var id = $m_sr_IntRef$().create__I__sr_IntRef(this.animateDyn$1__p1__T2__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_DoubleRef__sr_IntRef__sr_ObjectRef__sr_ObjectRef__I(new $c_s_Tuple2$mcDD$sp().init___D__D(1.0, 1.0), height, width, ctx, scale, step, interval, point, dyn));
-  aI.oninput = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, aI$1, dyn$2, id$1) {
+  aI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, aI$1, dyn$2, id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
       $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$5__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_IntRef__sr_IntRef__sr_IntRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, aI$1, dyn$2, id$1)
     })
   })(height, width, ctx, a, b, c, d, aI, dyn, id);
-  bI.oninput = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, bI$1, dyn$2, id$1) {
+  bI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, bI$1, dyn$2, id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
       $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$6__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_IntRef__sr_IntRef__sr_IntRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, bI$1, dyn$2, id$1)
     })
   })(height, width, ctx, a, b, c, d, bI, dyn, id);
-  cI.oninput = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, cI$1, dyn$2, id$1) {
+  cI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, cI$1, dyn$2, id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
       $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$7__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_IntRef__sr_IntRef__sr_IntRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, cI$1, dyn$2, id$1)
     })
   })(height, width, ctx, a, b, c, d, cI, dyn, id);
-  dI.oninput = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dI$1, dyn$2, id$1) {
+  dI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dI$1, dyn$2, id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
       $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$8__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_IntRef__sr_IntRef__sr_IntRef__sr_IntRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dI$1, dyn$2, id$1)

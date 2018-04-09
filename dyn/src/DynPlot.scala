@@ -159,14 +159,14 @@ object DynPlot{
 
     def stop() = dom.window.clearInterval(id)
 
-    aI.oninput = (event: dom.Event) => {
+    aI.onchange = (event: dom.Event) => {
       stop()
       a = aI.value.toInt
       init()
       dyn = Matrix(a, b, c, d)
     }
 
-    bI.oninput = (event: dom.Event) => {
+    bI.onchange = (event: dom.Event) => {
       stop()
       b = bI.value.toInt
       init()
@@ -174,14 +174,14 @@ object DynPlot{
     }
 
 
-    cI.oninput = (event: dom.Event) => {
+    cI.onchange = (event: dom.Event) => {
       stop()
       c = cI.value.toInt
       init()
       dyn = Matrix(a, b, c, d)
     }
 
-    dI.oninput = (event: dom.Event) => {
+    dI.onchange = (event: dom.Event) => {
       stop()
       d = dI.value.toInt
       init()
