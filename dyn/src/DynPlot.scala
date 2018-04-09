@@ -33,11 +33,39 @@ object DynPlot{
     val height = 400
     val width = 1000
 
-    implicit val cnvs = canvas(style := "border:1px solid #00ffff;").render
+    val cnvs = canvas(style := "border:1px solid #00ffff;").render
     cnvs.height = height;
     cnvs.width = width;
     implicit val ctx = cnvs.getContext("2d").asInstanceOf[dom.CanvasRenderingContext2D]
-    jsDiv.appendChild(cnvs)
+
+    var a = 1
+    var b = 0
+    var c = 0
+    var d = -1
+
+    var scale = 100
+    var step = 0.01
+    var interval = 10
+
+    val aI = input(size := "5",value := a).render
+    val bI = input(size:= "5", value := b).render
+    val cI = input(size:= "5", value := c).render
+    val dI = input(size:= "5", value := d).render
+
+
+    val tab =
+      div(`class` := "col-md-3")(
+        h3("Matrix:"),
+        table(`class` := "table")(
+      tr(td(strong("a = "), aI), td(strong("b = "), bI)),
+      tr(td(strong("c = "), cI), td(strong("d = "), dI))
+    )
+  )
+
+
+    jsDiv.appendChild(
+      div(cnvs, tab).render
+    )
 
     def init() = {
       ctx.fillStyle = "white"
@@ -52,6 +80,7 @@ object DynPlot{
       ctx.lineTo(width/2, height)
       ctx.stroke()
     }
+
 
     def drawPath(xys: Seq[(Double, Double)], scale: Double, lw: Int = 1, col: String = "green") = {
       ctx.beginPath()
@@ -73,13 +102,17 @@ object DynPlot{
       (x, y)
     }
 
-    drawPath(testPath, 200)
+    // drawPath(testPath, 200)
 
-    def animateDyn(init: Point, dyn: Point => Point,  step: Double,  scale: Double, interval: Double) = {
-      var point = init
+    var point = (0.0, 0.0)
+
+    var dyn = Matrix(a, b, c, d)
+
+    def animateDyn(init: Point) = {
+      point = init
       ctx.beginPath()
       ctx.lineWidth = 2
-      ctx.strokeStyle = "red"
+      ctx.strokeStyle = "blue"
 
       val animId =
         dom.window.setInterval(
@@ -91,8 +124,8 @@ object DynPlot{
             val y1 = dyn((x0, y0))._2
             val x = x0 + (x1 * step)
             val y = y0 + (y1 * step)
-            console.log(x)
-            console.log(y)
+            // console.log(x)
+            // console.log(y)
             point = (x, y)
             ctx.lineTo(x * scale + width/2, height/2 - (y * scale) )
             ctx.stroke()
@@ -119,15 +152,60 @@ object DynPlot{
 
     // val id = animatePath(testPath, 150, 1)
 
-    val id = animateDyn((1, 1), Matrix(1, 0, 0, -1), 0.05, 100, 100 )
+    var id = animateDyn((1, 1))
 
-    dom.window.onclick = {
+    def ctop = cnvs.getBoundingClientRect.top
+    def cleft = cnvs.getBoundingClientRect.left
+
+    def stop() = dom.window.clearInterval(id)
+
+    aI.oninput = (event: dom.Event) => {
+      stop()
+      a = aI.value.toInt
+      init()
+      dyn = Matrix(a, b, c, d)
+    }
+
+    bI.oninput = (event: dom.Event) => {
+      stop()
+      b = bI.value.toInt
+      init()
+      dyn = Matrix(a, b, c, d)
+    }
+
+
+    cI.oninput = (event: dom.Event) => {
+      stop()
+      c = cI.value.toInt
+      init()
+      dyn = Matrix(a, b, c, d)
+    }
+
+    dI.oninput = (event: dom.Event) => {
+      stop()
+      d = dI.value.toInt
+      init()
+      dyn = Matrix(a, b, c, d)
+    }
+
+
+    dyn = Matrix(a, b, c, d)
+
+    cnvs.onclick = {
       (event) =>
-        dom.window.clearInterval(id)
-        console.log(event.pageX)
-        console.log(event.pageY)
-        console.log(cnvs.getBoundingClientRect.top)
-        console.log(cnvs.getBoundingClientRect.left)
+        stop()
+        val xpos = event.pageX - cleft
+        val ypos = event.pageY - ctop
+        val x = (xpos - (width/2))/scale
+        val y = -(ypos - (height/2))/scale
+        // console.log(x)
+        // console.log(y)
+        id = animateDyn((x, y))
+        // console.log(event.pageX)
+        // console.log(event.pageY)
+        // console.log(cleft)
+        // console.log(ctop)
+        // console.log(y)
 
       }
   }
