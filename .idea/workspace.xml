@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a003871-8e96-4be2-ad82-d21837e251f2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/hydra.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/highlighting.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dyn/out.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dyn/out.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dyn/out.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dyn/out.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dyn/src/DynPlot.scala" beforeDir="false" afterPath="$PROJECT_DIR$/dyn/src/DynPlot.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/project/" />
@@ -21,8 +24,8 @@
       <file leaf-file-name="DynPlot.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dyn/src/DynPlot.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="112" lean-forward="true" selection-start-line="15" selection-start-column="112" selection-end-line="15" selection-end-column="112" />
+            <state relative-caret-position="265">
+              <caret line="46" column="107" lean-forward="true" selection-start-line="46" selection-start-column="107" selection-end-line="46" selection-end-column="107" />
               <folding>
                 <element signature="e#13#35#0" expanded="true" />
               </folding>
@@ -48,6 +51,9 @@
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -55,7 +61,7 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProvingGround" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -148,11 +154,31 @@
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="0" />
       <window_info id="Project" order="0" />
+      <window_info anchor="bottom" id="Find" />
       <window_info id="Structure" order="0" side_tool="true" />
       <window_info anchor="right" id="Ant Build" order="0" />
       <window_info id="UI Designer" order="0" />
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="bottom" id="Debug" order="0" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info id="Designer" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="bottom" id="Run" order="0" />
+      <window_info anchor="right" id="Ant Build" order="0" />
+      <window_info id="Project" order="0" />
+      <window_info id="Structure" order="0" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="0" />
+      <window_info anchor="bottom" id="TODO" order="0" />
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Capture Tool" order="0" />
+      <window_info id="UI Designer" order="0" />
+      <window_info anchor="bottom" id="Debug" order="0" />
+      <window_info anchor="right" id="Palette&#9;" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" weight="0.32992035" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="right" id="Maven Projects" order="0" />
       <window_info id="Favorites" order="0" side_tool="true" />
     </layout>
   </component>
@@ -162,8 +188,18 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dyn/src/DynPlot.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="112" lean-forward="true" selection-start-line="15" selection-start-column="112" selection-end-line="15" selection-end-column="112" />
+        <state relative-caret-position="585">
+          <caret line="222" column="43" selection-start-line="222" selection-start-column="43" selection-end-line="222" selection-end-column="43" />
+          <folding>
+            <element signature="e#13#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyn/src/DynPlot.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="46" column="107" lean-forward="true" selection-start-line="46" selection-start-column="107" selection-end-line="46" selection-end-column="107" />
           <folding>
             <element signature="e#13#35#0" expanded="true" />
           </folding>

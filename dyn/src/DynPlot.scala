@@ -2,6 +2,7 @@ package dyn
 
 import org.scalajs.dom
 import org.scalajs.dom._
+import org.scalajs.dom.html.Input
 import scalatags.JsDom.all._
 
 //import scala.scalajs.js.JSApp
@@ -14,11 +15,9 @@ object DynPlot{
   def solvSeq(init: Point, dyn: Point => Point, scale: Double, length: Int = 1000): Vector[(Double, Double)] =
     (0 until length).foldRight[Vector[Point]](Vector(init)){
       case (_, seq) =>
-       {
-         val (x, y) = seq.last
-         val (x1, y1) = dyn((x, y))
-         seq :+ (x + x1 * scale, y + y1 * scale)
-       }
+       val (x, y) = seq.last
+        val (x1, y1) = dyn((x, y))
+        seq :+ (x + x1 * scale, y + y1 * scale)
     }
 
   case class Matrix(a: Double, b: Double, c: Double, d: Double) extends (Point => Point) {
@@ -43,14 +42,14 @@ object DynPlot{
     var c = 0.0
     var d = -1.0
 
-    var scale = 100
-    var step = 0.002
-    var interval = 1
+    val scale = 100
+    val step = 0.002
+    val interval = 1
 
-    val aI = input(size := "5",value := a).render
-    val bI = input(size:= "5", value := b).render
-    val cI = input(size:= "5", value := c).render
-    val dI = input(size:= "5", value := d).render
+    val aI: Input = input(size := "5",value := a).render
+    val bI: Input = input(size:= "5", value := b).render
+    val cI: Input = input(size:= "5", value := c).render
+    val dI: Input = input(size:= "5", value := d).render
 
 
     val tab =
@@ -109,14 +108,7 @@ object DynPlot{
     }
 
     init()
-
-    val testPath = (1 to 1000).map{(n) =>
-      val x = n.toDouble/1000
-      val y = x * x
-      (x, y)
-    }
-
-    // drawPath(testPath, 200)
+    
 
     var point = (0.0, 0.0)
 
@@ -148,23 +140,6 @@ object DynPlot{
       )
       animId
     }
-
-    def animatePath(xys: Seq[(Double, Double)], scale: Double, interval: Double) = {
-      var i = 1
-      val animID =
-        dom.window.setInterval(
-        () =>
-          {
-            i += 1
-            // console.log(i)
-            drawPath(xys.take(i), scale, 2, "blue")
-          },
-          interval
-      )
-      animID
-    }
-
-    // val id = animatePath(testPath, 150, 1)
 
     var id = animateDyn((1, 1))
 
