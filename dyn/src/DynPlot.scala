@@ -30,8 +30,8 @@ object DynPlot{
 
     val jsDiv = document.getElementById("js-div")
 
-    val height = 400
-    val width = 1000
+    val height = 500
+    val width = 500
 
     val cnvs = canvas(style := "border:1px solid #00ffff;").render
     cnvs.height = height;
@@ -71,10 +71,13 @@ object DynPlot{
     val resume =
         button(`class` := "btn btn-success")("continue").render
 
+    val paths =
+        button(`class` := "btn btn-primary")("random paths").render
+
 
     jsDiv.appendChild(
       div(cnvs, tab,
-        div(`class` := "row")(pause, span(" "), clear, span(" "), resume)
+        div(`class` := "row")(pause, span(" "), clear, span(" "), resume, span(" "), paths)
       ).render
     )
 
@@ -207,6 +210,20 @@ object DynPlot{
 
     dyn = Matrix(a, b, c, d)
 
+    lazy val rnd = new scala.util.Random
+
+    def showRandom(n: Int = 500, length: Int = 1000) = {
+      (1 to n).foreach{(_) =>
+        val x0 = rnd.nextDouble() * 10 - 5
+        val y0 = rnd.nextDouble() * 10 - 5
+        // console.log(x0)
+        // console.log(y0)
+        drawPath(solvSeq((x0, y0), dyn, step, length), scale)
+      }
+    }
+
+    paths.onclick = (_) => showRandom()
+
     cnvs.onclick = {
       (event) =>
         stop()
@@ -214,15 +231,7 @@ object DynPlot{
         val ypos = event.pageY - ctop
         val x = (xpos - (width/2))/scale
         val y = -(ypos - (height/2))/scale
-        // console.log(x)
-        // console.log(y)
         id = animateDyn((x, y))
-        // console.log(event.pageX)
-        // console.log(event.pageY)
-        // console.log(cleft)
-        // console.log(ctop)
-        // console.log(y)
-
       }
   }
 }
