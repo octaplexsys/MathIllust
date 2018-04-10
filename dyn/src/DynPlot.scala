@@ -44,8 +44,8 @@ object DynPlot{
     var d = -1.0
 
     var scale = 100
-    var step = 0.01
-    var interval = 10
+    var step = 0.002
+    var interval = 1
 
     val aI = input(size := "5",value := a).render
     val bI = input(size:= "5", value := b).render
