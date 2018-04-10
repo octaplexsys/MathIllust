@@ -4,14 +4,14 @@ import org.scalajs.dom
 import org.scalajs.dom._
 import scalatags.JsDom.all._
 
-import scala.scalajs.js.JSApp
+//import scala.scalajs.js.JSApp
 import scala.scalajs.js.annotation._
 
 
 @JSExportTopLevel("DynPlot")
 object DynPlot{
   type Point = (Double, Double)
-  def solvSeq(init: Point, dyn: Point => Point, scale: Double, length: Int = 1000) =
+  def solvSeq(init: Point, dyn: Point => Point, scale: Double, length: Int = 1000): Vector[(Double, Double)] =
     (0 until length).foldRight[Vector[Point]](Vector(init)){
       case (_, seq) =>
        {
@@ -22,7 +22,7 @@ object DynPlot{
     }
 
   case class Matrix(a: Double, b: Double, c: Double, d: Double) extends (Point => Point) {
-      def apply(xy: Point) =  (a * xy._1 + b * xy._2, c * xy._1 + d * xy._2)
+      def apply(xy: Point): (Double, Double) =  (a * xy._1 + b * xy._2, c * xy._1 + d * xy._2)
     }
 
   @JSExport
@@ -34,9 +34,9 @@ object DynPlot{
     val width = 500
 
     val cnvs = canvas(style := "border:1px solid #00ffff;").render
-    cnvs.height = height;
-    cnvs.width = width;
-    implicit val ctx = cnvs.getContext("2d").asInstanceOf[dom.CanvasRenderingContext2D]
+    cnvs.height = height
+    cnvs.width = width
+    implicit val ctx: CanvasRenderingContext2D = cnvs.getContext("2d").asInstanceOf[dom.CanvasRenderingContext2D]
 
     var a = 1.0
     var b = 0.0
@@ -81,7 +81,7 @@ object DynPlot{
       ).render
     )
 
-    def init() = {
+    def init(): Unit = {
       ctx.fillStyle = "white"
       ctx.fillRect(0, 0, width, height)
       ctx.beginPath()
@@ -96,7 +96,7 @@ object DynPlot{
     }
 
 
-    def drawPath(xys: Seq[(Double, Double)], scale: Double, lw: Int = 1, col: String = "green") = {
+    def drawPath(xys: Seq[(Double, Double)], scale: Double, lw: Int = 1, col: String = "green"): Unit = {
       ctx.beginPath()
       ctx.lineWidth = lw
       ctx.strokeStyle = col
@@ -171,7 +171,7 @@ object DynPlot{
     def ctop = cnvs.getBoundingClientRect.top
     def cleft = cnvs.getBoundingClientRect.left
 
-    def stop() = dom.window.clearInterval(id)
+    def stop(): Unit = dom.window.clearInterval(id)
 
     aI.onchange = (event: dom.Event) => {
       stop()
@@ -212,7 +212,7 @@ object DynPlot{
 
     lazy val rnd = new scala.util.Random
 
-    def showRandom(n: Int = 500, length: Int = 1000) = {
+    def showRandom(n: Int = 500, length: Int = 1000): Unit = {
       (1 to n).foreach{(_) =>
         val x0 = rnd.nextDouble() * 10 - 5
         val y0 = rnd.nextDouble() * 10 - 5
