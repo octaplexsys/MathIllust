@@ -37,6 +37,37 @@ object DynPlot{
     cnvs.width = width
     implicit val ctx: CanvasRenderingContext2D = cnvs.getContext("2d").asInstanceOf[dom.CanvasRenderingContext2D]
 
+    def ctop: Double = cnvs.getBoundingClientRect.top
+    def cleft: Double = cnvs.getBoundingClientRect.left
+
+    def init(): Unit = {
+      ctx.fillStyle = "white"
+      ctx.fillRect(0, 0, width, height)
+      ctx.beginPath()
+      ctx.lineWidth = 2
+      ctx.strokeStyle = "black"
+      ctx.moveTo(0,  height/2)
+      ctx.lineTo(width, height/2)
+      ctx.stroke()
+      ctx.moveTo(width/2, 0)
+      ctx.lineTo(width/2, height)
+      ctx.stroke()
+    }
+
+
+    def drawPath(xys: Seq[(Double, Double)], scale: Double, lw: Int = 1, col: String = "green"): Unit = {
+      ctx.beginPath()
+      ctx.lineWidth = lw
+      ctx.strokeStyle = col
+      val (x0, y0) = xys.head
+      ctx.moveTo(x0 * scale + width/2, height/2 - (y0 * scale) )
+      xys.tail.foreach{
+        case (x, y) => ctx.lineTo(x * scale + width/2, height/2 - (y * scale) )
+      }
+      ctx.stroke()
+    }
+
+
     var a = 1.0
     var b = 0.0
     var c = 0.0
@@ -45,6 +76,10 @@ object DynPlot{
     val scale = 100
     val step = 0.002
     val interval = 1
+
+    var point : Point = (0.0, 0.0)
+
+    var dyn: Point => Point = Matrix(a, b, c, d)
 
     val aI: Input = input(size := "5",value := a).render
     val bI: Input = input(size:= "5", value := b).render
@@ -80,41 +115,10 @@ object DynPlot{
       ).render
     )
 
-    def init(): Unit = {
-      ctx.fillStyle = "white"
-      ctx.fillRect(0, 0, width, height)
-      ctx.beginPath()
-      ctx.lineWidth = 2
-      ctx.strokeStyle = "black"
-      ctx.moveTo(0,  height/2)
-      ctx.lineTo(width, height/2)
-      ctx.stroke()
-      ctx.moveTo(width/2, 0)
-      ctx.lineTo(width/2, height)
-      ctx.stroke()
-    }
 
 
-    def drawPath(xys: Seq[(Double, Double)], scale: Double, lw: Int = 1, col: String = "green"): Unit = {
-      ctx.beginPath()
-      ctx.lineWidth = lw
-      ctx.strokeStyle = col
-      val (x0, y0) = xys.head
-      ctx.moveTo(x0 * scale + width/2, height/2 - (y0 * scale) )
-      xys.tail.foreach{
-        case (x, y) => ctx.lineTo(x * scale + width/2, height/2 - (y * scale) )
-      }
-      ctx.stroke()
-    }
 
-    init()
-    
-
-    var point = (0.0, 0.0)
-
-    var dyn = Matrix(a, b, c, d)
-
-    def animateDyn(init: Point) = {
+    def animateDyn(init: Point): Int = {
       point = init
       ctx.beginPath()
       ctx.lineWidth = 2
@@ -122,40 +126,38 @@ object DynPlot{
 
       val animId =
         dom.window.setInterval(
-        () =>
-          {
-            val (x0, y0) = point
-            ctx.moveTo(x0 * scale + width/2, height/2 - (y0 * scale) )
-            val x1 = dyn((x0, y0))._1
-            val y1 = dyn((x0, y0))._2
-            val x = x0 + (x1 * step)
-            val y = y0 + (y1 * step)
-            // console.log(x)
-            // console.log(y)
-            point = (x, y)
-            ctx.lineTo(x * scale + width/2, height/2 - (y * scale) )
-            ctx.stroke()
-          },
-          interval
+        handler = () => {
+          val (x0, y0) = point
+          ctx.moveTo(x0 * scale + width / 2, height / 2 - (y0 * scale))
+          val x1 = dyn((x0, y0))._1
+          val y1 = dyn((x0, y0))._2
+          val x = x0 + (x1 * step)
+          val y = y0 + (y1 * step)
+          point = (x, y)
+          ctx.lineTo(x * scale + width / 2, height / 2 - (y * scale))
+          ctx.stroke()
+        },
+          timeout = interval
       )
       animId
     }
 
+    init()
+
     var id = animateDyn((1, 1))
 
-    def ctop = cnvs.getBoundingClientRect.top
-    def cleft = cnvs.getBoundingClientRect.left
-
     def stop(): Unit = dom.window.clearInterval(id)
+    
 
-    aI.onchange = (event: dom.Event) => {
+
+    aI.onchange = (_: dom.Event) => {
       stop()
       a = aI.value.toDouble
       init()
       dyn = Matrix(a, b, c, d)
     }
 
-    bI.onchange = (event: dom.Event) => {
+    bI.onchange = (_: dom.Event) => {
       stop()
       b = bI.value.toDouble
       init()
@@ -163,14 +165,14 @@ object DynPlot{
     }
 
 
-    cI.onchange = (event: dom.Event) => {
+    cI.onchange = (_: dom.Event) => {
       stop()
       c = cI.value.toDouble
       init()
       dyn = Matrix(a, b, c, d)
     }
 
-    dI.onchange = (event: dom.Event) => {
+    dI.onchange = (_: dom.Event) => {
       stop()
       d = dI.value.toDouble
       init()

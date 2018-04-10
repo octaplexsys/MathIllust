@@ -1099,6 +1099,18 @@ function $f_F1__apply$mcVI$sp__I__V($thiz, v1) {
 function $f_F1__$$init$__V($thiz) {
   /*<skip>*/
 }
+function $is_F1(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.F1)))
+}
+function $as_F1(obj) {
+  return (($is_F1(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.Function1"))
+}
+function $isArrayOf_F1(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.F1)))
+}
+function $asArrayOf_F1(obj, depth) {
+  return (($isArrayOf_F1(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.Function1;", depth))
+}
 function $f_F2__toString__T($thiz) {
   return "<function2>"
 }
@@ -1743,6 +1755,8 @@ $c_Ldyn_DynPlot$.prototype.main__V = (function() {
   var scale = 100;
   var step = 0.002;
   var interval = 1;
+  var point = $m_sr_ObjectRef$().create__O__sr_ObjectRef(new $c_s_Tuple2$mcDD$sp().init___D__D(0.0, 0.0));
+  var dyn = $m_sr_ObjectRef$().create__O__sr_ObjectRef(new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a.elem$1, b.elem$1, c.elem$1, d.elem$1));
   var aI = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().size__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("5", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().value__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(a.elem$1, $m_Lscalatags_JsDom$all$().doubleAttr__Lscalatags_generic_AttrValue())])).render__Lorg_scalajs_dom_raw_Element();
   var bI = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().size__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("5", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().value__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(b.elem$1, $m_Lscalatags_JsDom$all$().doubleAttr__Lscalatags_generic_AttrValue())])).render__Lorg_scalajs_dom_raw_Element();
   var cI = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().size__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("5", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue()), $m_Lscalatags_JsDom$all$().value__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(c.elem$1, $m_Lscalatags_JsDom$all$().doubleAttr__Lscalatags_generic_AttrValue())])).render__Lorg_scalajs_dom_raw_Element();
@@ -1754,33 +1768,31 @@ $c_Ldyn_DynPlot$.prototype.main__V = (function() {
   var paths = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().button__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().$class__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("btn btn-primary", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag("random paths")])).render__Lorg_scalajs_dom_raw_Element();
   jsDiv.appendChild($as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(cnvs), tab, $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().$class__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("row", $m_Lscalatags_JsDom$all$().stringAttr__Lscalatags_generic_AttrValue())])).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(pause), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag(" ")])), $m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(clear), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag(" ")])), $m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(resume), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span__Lscalatags_generic_TypedTag()).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().stringFrag__T__Lscalatags_JsDom$StringFrag(" ")])), $m_Lscalatags_JsDom$all$().bindNode__Lorg_scalajs_dom_raw_Node__Lscalatags_LowPriorityImplicits$bindNode(paths)]))])).render__Lorg_scalajs_dom_raw_Element());
   this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height, width, ctx);
-  var point = $m_sr_ObjectRef$().create__O__sr_ObjectRef(new $c_s_Tuple2$mcDD$sp().init___D__D(0.0, 0.0));
-  var dyn = $m_sr_ObjectRef$().create__O__sr_ObjectRef(new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a.elem$1, b.elem$1, c.elem$1, d.elem$1));
   var id = $m_sr_IntRef$().create__I__sr_IntRef(this.animateDyn$1__p1__T2__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__I__D__I__sr_ObjectRef__sr_ObjectRef__I(new $c_s_Tuple2$mcDD$sp().init___D__D(1.0, 1.0), height, width, ctx, scale, step, interval, point, dyn));
-  aI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, aI$1, dyn$2, id$1) {
+  aI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dyn$2, aI$1, id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
-      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$3__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, aI$1, dyn$2, id$1)
+      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$3__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_ObjectRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dyn$2, aI$1, id$1)
     })
-  })(height, width, ctx, a, b, c, d, aI, dyn, id);
-  bI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, bI$1, dyn$2, id$1) {
+  })(height, width, ctx, a, b, c, d, dyn, aI, id);
+  bI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dyn$2, bI$1, id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
-      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$4__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, bI$1, dyn$2, id$1)
+      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$4__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_ObjectRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dyn$2, bI$1, id$1)
     })
-  })(height, width, ctx, a, b, c, d, bI, dyn, id);
-  cI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, cI$1, dyn$2, id$1) {
+  })(height, width, ctx, a, b, c, d, dyn, bI, id);
+  cI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dyn$2, cI$1, id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
-      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$5__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, cI$1, dyn$2, id$1)
+      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$5__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_ObjectRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dyn$2, cI$1, id$1)
     })
-  })(height, width, ctx, a, b, c, d, cI, dyn, id);
-  dI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dI$1, dyn$2, id$1) {
+  })(height, width, ctx, a, b, c, d, dyn, cI, id);
+  dI.onchange = (function(height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dyn$2, dI$1, id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
-      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$6__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dI$1, dyn$2, id$1)
+      $m_Ldyn_DynPlot$().dyn$DynPlot$$$anonfun$main$6__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_ObjectRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_IntRef__V(arg1, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dyn$2, dI$1, id$1)
     })
-  })(height, width, ctx, a, b, c, d, dI, dyn, id);
+  })(height, width, ctx, a, b, c, d, dyn, dI, id);
   pause.onclick = (function(id$1) {
     return (function(arg1$2) {
       var arg1 = arg1$2;
@@ -1846,6 +1858,12 @@ $c_Ldyn_DynPlot$.prototype.$$anonfun$solvSeq$1__p1__F1__D__I__sci_Vector__sci_Ve
   } else {
     throw new $c_s_MatchError().init___O(x1)
   }
+});
+$c_Ldyn_DynPlot$.prototype.ctop$1__p1__Lorg_scalajs_dom_raw_HTMLCanvasElement__D = (function(cnvs$1) {
+  return $uD(cnvs$1.getBoundingClientRect().top)
+});
+$c_Ldyn_DynPlot$.prototype.cleft$1__p1__Lorg_scalajs_dom_raw_HTMLCanvasElement__D = (function(cnvs$1) {
+  return $uD(cnvs$1.getBoundingClientRect().left)
 });
 $c_Ldyn_DynPlot$.prototype.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V = (function(height$1, width$1, ctx$1) {
   ctx$1.fillStyle = $m_sjs_js_Any$().fromString__T__sjs_js_Any("white");
@@ -1913,8 +1931,8 @@ $c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$2__I__I__Lorg_scalajs_dom_
   var x0$2 = x$4.$$und1$mcD$sp__D();
   var y0$2 = x$4.$$und2$mcD$sp__D();
   ctx$1.moveTo(((x0$2 * scale$2) + ((width$1 / 2) | 0)), (((height$1 / 2) | 0) - (y0$2 * scale$2)));
-  var x1$2 = $as_Ldyn_DynPlot$Matrix(dyn$2.elem$1).apply__T2__T2(new $c_s_Tuple2$mcDD$sp().init___D__D(x0$2, y0$2)).$$und1$mcD$sp__D();
-  var y1 = $as_Ldyn_DynPlot$Matrix(dyn$2.elem$1).apply__T2__T2(new $c_s_Tuple2$mcDD$sp().init___D__D(x0$2, y0$2)).$$und2$mcD$sp__D();
+  var x1$2 = $as_T2($as_F1(dyn$2.elem$1).apply__O__O(new $c_s_Tuple2$mcDD$sp().init___D__D(x0$2, y0$2))).$$und1$mcD$sp__D();
+  var y1 = $as_T2($as_F1(dyn$2.elem$1).apply__O__O(new $c_s_Tuple2$mcDD$sp().init___D__D(x0$2, y0$2))).$$und2$mcD$sp__D();
   var x = (x0$2 + (x1$2 * step$1));
   var y = (y0$2 + (y1 * step$1));
   point$1.elem$1 = new $c_s_Tuple2$mcDD$sp().init___D__D(x, y);
@@ -1933,46 +1951,40 @@ $c_Ldyn_DynPlot$.prototype.animateDyn$1__p1__T2__I__I__Lorg_scalajs_dom_raw_Canv
   })(height$1, width$1, ctx$1, scale$2, step$1, point$1, dyn$2), interval$1));
   return animId
 });
-$c_Ldyn_DynPlot$.prototype.ctop$1__p1__Lorg_scalajs_dom_raw_HTMLCanvasElement__D = (function(cnvs$1) {
-  return $uD(cnvs$1.getBoundingClientRect().top)
-});
-$c_Ldyn_DynPlot$.prototype.cleft$1__p1__Lorg_scalajs_dom_raw_HTMLCanvasElement__D = (function(cnvs$1) {
-  return $uD(cnvs$1.getBoundingClientRect().left)
-});
 $c_Ldyn_DynPlot$.prototype.stop$1__p1__sr_IntRef__V = (function(id$1) {
   $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().clearInterval(id$1.elem$1)
 });
-$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$3__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, aI$1, dyn$2, id$1) {
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$3__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_ObjectRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_IntRef__V = (function(x$5, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dyn$2, aI$1, id$1) {
   this.stop$1__p1__sr_IntRef__V(id$1);
   a$1.elem$1 = new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T($as_T(aI$1.value))).toDouble__D();
   this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height$1, width$1, ctx$1);
   dyn$2.elem$1 = new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a$1.elem$1, b$1.elem$1, c$1.elem$1, d$1.elem$1)
 });
-$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$4__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, bI$1, dyn$2, id$1) {
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$4__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_ObjectRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_IntRef__V = (function(x$6, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dyn$2, bI$1, id$1) {
   this.stop$1__p1__sr_IntRef__V(id$1);
   b$1.elem$1 = new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T($as_T(bI$1.value))).toDouble__D();
   this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height$1, width$1, ctx$1);
   dyn$2.elem$1 = new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a$1.elem$1, b$1.elem$1, c$1.elem$1, d$1.elem$1)
 });
-$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$5__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, cI$1, dyn$2, id$1) {
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$5__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_ObjectRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_IntRef__V = (function(x$7, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dyn$2, cI$1, id$1) {
   this.stop$1__p1__sr_IntRef__V(id$1);
   c$1.elem$1 = new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T($as_T(cI$1.value))).toDouble__D();
   this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height$1, width$1, ctx$1);
   dyn$2.elem$1 = new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a$1.elem$1, b$1.elem$1, c$1.elem$1, d$1.elem$1)
 });
-$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$6__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dI$1, dyn$2, id$1) {
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$6__Lorg_scalajs_dom_raw_Event__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__sr_ObjectRef__Lorg_scalajs_dom_raw_HTMLInputElement__sr_IntRef__V = (function(x$8, height$1, width$1, ctx$1, a$1, b$1, c$1, d$1, dyn$2, dI$1, id$1) {
   this.stop$1__p1__sr_IntRef__V(id$1);
   d$1.elem$1 = new $c_sci_StringOps().init___T($m_s_Predef$().augmentString__T__T($as_T(dI$1.value))).toDouble__D();
   this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height$1, width$1, ctx$1);
   dyn$2.elem$1 = new $c_Ldyn_DynPlot$Matrix().init___D__D__D__D(a$1.elem$1, b$1.elem$1, c$1.elem$1, d$1.elem$1)
 });
-$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$7__Lorg_scalajs_dom_raw_MouseEvent__sr_IntRef__V = (function(x$5, id$1) {
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$7__Lorg_scalajs_dom_raw_MouseEvent__sr_IntRef__V = (function(x$9, id$1) {
   this.stop$1__p1__sr_IntRef__V(id$1)
 });
-$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$8__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__I__D__I__sr_ObjectRef__sr_ObjectRef__sr_IntRef__V = (function(x$6, height$1, width$1, ctx$1, scale$2, step$1, interval$1, point$1, dyn$2, id$1) {
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$8__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__I__D__I__sr_ObjectRef__sr_ObjectRef__sr_IntRef__V = (function(x$10, height$1, width$1, ctx$1, scale$2, step$1, interval$1, point$1, dyn$2, id$1) {
   id$1.elem$1 = this.animateDyn$1__p1__T2__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__I__D__I__sr_ObjectRef__sr_ObjectRef__I($as_T2(point$1.elem$1), height$1, width$1, ctx$1, scale$2, step$1, interval$1, point$1, dyn$2)
 });
-$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$9__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V = (function(x$7, height$1, width$1, ctx$1) {
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$9__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V = (function(x$11, height$1, width$1, ctx$1) {
   this.init$1__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(height$1, width$1, ctx$1)
 });
 $c_Ldyn_DynPlot$.prototype.rnd$lzycompute$1__p1__sr_LazyRef__s_util_Random = (function(rnd$lzy$1) {
@@ -1984,16 +1996,16 @@ $c_Ldyn_DynPlot$.prototype.rnd$lzycompute$1__p1__sr_LazyRef__s_util_Random = (fu
 $c_Ldyn_DynPlot$.prototype.rnd$1__p1__sr_LazyRef__s_util_Random = (function(rnd$lzy$1) {
   return (rnd$lzy$1.initialized__Z() ? $as_s_util_Random(rnd$lzy$1.value__O()) : this.rnd$lzycompute$1__p1__sr_LazyRef__s_util_Random(rnd$lzy$1))
 });
-$c_Ldyn_DynPlot$.prototype.$$anonfun$main$10__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__I__D__sr_ObjectRef__I__sr_LazyRef__I__V = (function(height$1, width$1, ctx$1, scale$2, step$1, dyn$2, length$1, rnd$lzy$1, x$8) {
+$c_Ldyn_DynPlot$.prototype.$$anonfun$main$10__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__I__D__sr_ObjectRef__I__sr_LazyRef__I__V = (function(height$1, width$1, ctx$1, scale$2, step$1, dyn$2, length$1, rnd$lzy$1, x$12) {
   var x0 = ((this.rnd$1__p1__sr_LazyRef__s_util_Random(rnd$lzy$1).nextDouble__D() * 10) - 5);
   var y0 = ((this.rnd$1__p1__sr_LazyRef__s_util_Random(rnd$lzy$1).nextDouble__D() * 10) - 5);
-  this.drawPath$1__p1__sc_Seq__D__I__T__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V($m_Ldyn_DynPlot$().solvSeq__T2__F1__D__I__sci_Vector(new $c_s_Tuple2$mcDD$sp().init___D__D(x0, y0), $as_Ldyn_DynPlot$Matrix(dyn$2.elem$1), step$1, length$1), scale$2, this.drawPath$default$3$1__p1__I(), this.drawPath$default$4$1__p1__T(), height$1, width$1, ctx$1)
+  this.drawPath$1__p1__sc_Seq__D__I__T__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V($m_Ldyn_DynPlot$().solvSeq__T2__F1__D__I__sci_Vector(new $c_s_Tuple2$mcDD$sp().init___D__D(x0, y0), $as_F1(dyn$2.elem$1), step$1, length$1), scale$2, this.drawPath$default$3$1__p1__I(), this.drawPath$default$4$1__p1__T(), height$1, width$1, ctx$1)
 });
 $c_Ldyn_DynPlot$.prototype.showRandom$1__p1__I__I__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__I__D__sr_ObjectRef__sr_LazyRef__V = (function(n, length, height$1, width$1, ctx$1, scale$2, step$1, dyn$2, rnd$lzy$1) {
   $m_sr_RichInt$().to$extension0__I__I__sci_Range$Inclusive($m_s_Predef$().intWrapper__I__I(1), n).foreach$mVc$sp__F1__V(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this, height$1, width$1, ctx$1, scale$2, step$1, dyn$2, length, rnd$lzy$1) {
-    return (function(x$8$2) {
-      var x$8 = $uI(x$8$2);
-      $this.$$anonfun$main$10__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__I__D__sr_ObjectRef__I__sr_LazyRef__I__V(height$1, width$1, ctx$1, scale$2, step$1, dyn$2, length, rnd$lzy$1, x$8)
+    return (function(x$12$2) {
+      var x$12 = $uI(x$12$2);
+      $this.$$anonfun$main$10__p1__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__I__D__sr_ObjectRef__I__sr_LazyRef__I__V(height$1, width$1, ctx$1, scale$2, step$1, dyn$2, length, rnd$lzy$1, x$12)
     })
   })(this, height$1, width$1, ctx$1, scale$2, step$1, dyn$2, length, rnd$lzy$1)))
 });
@@ -2003,7 +2015,7 @@ $c_Ldyn_DynPlot$.prototype.showRandom$default$1$1__p1__I = (function() {
 $c_Ldyn_DynPlot$.prototype.showRandom$default$2$1__p1__I = (function() {
   return 1000
 });
-$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$11__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__I__D__sr_ObjectRef__sr_LazyRef__V = (function(x$9, height$1, width$1, ctx$1, scale$2, step$1, dyn$2, rnd$lzy$1) {
+$c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$11__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__I__D__sr_ObjectRef__sr_LazyRef__V = (function(x$13, height$1, width$1, ctx$1, scale$2, step$1, dyn$2, rnd$lzy$1) {
   this.showRandom$1__p1__I__I__I__I__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__I__D__sr_ObjectRef__sr_LazyRef__V(this.showRandom$default$1$1__p1__I(), this.showRandom$default$2$1__p1__I(), height$1, width$1, ctx$1, scale$2, step$1, dyn$2, rnd$lzy$1)
 });
 $c_Ldyn_DynPlot$.prototype.dyn$DynPlot$$$anonfun$main$12__Lorg_scalajs_dom_raw_MouseEvent__I__I__Lorg_scalajs_dom_raw_HTMLCanvasElement__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__I__D__I__sr_ObjectRef__sr_ObjectRef__sr_IntRef__V = (function(event, height$1, width$1, cnvs$1, ctx$1, scale$2, step$1, interval$1, point$1, dyn$2, id$1) {
