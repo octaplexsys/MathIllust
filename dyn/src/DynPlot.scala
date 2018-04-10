@@ -2,7 +2,9 @@ package dyn
 
 import org.scalajs.dom
 import org.scalajs.dom._
+import rx.Ctx._
 import scalatags.JsDom.all._
+import rx._
 
 //import scala.scalajs.js.JSApp
 import scala.scalajs.js.annotation._
@@ -26,7 +28,7 @@ object DynPlot{
     }
 
   @JSExport
-  def main(): Unit = {
+  def main()(implicit ctx: Owner): Unit = {
 
     val jsDiv = document.getElementById("js-div")
 
@@ -38,19 +40,19 @@ object DynPlot{
     cnvs.width = width
     implicit val ctx: CanvasRenderingContext2D = cnvs.getContext("2d").asInstanceOf[dom.CanvasRenderingContext2D]
 
-    var a = 1.0
-    var b = 0.0
-    var c = 0.0
-    var d = -1.0
+    var a = Var(1.0)
+    var b = Var(0.0)
+    var c = Var(0.0)
+    var d = Var(-1.0)
 
     var scale = 100
     var step = 0.002
     var interval = 1
 
-    val aI = input(size := "5",value := a).render
-    val bI = input(size:= "5", value := b).render
-    val cI = input(size:= "5", value := c).render
-    val dI = input(size:= "5", value := d).render
+    val aI = input(size := "5",value := a.now).render
+    val bI = input(size:= "5", value := b.now).render
+    val cI = input(size:= "5", value := c.now).render
+    val dI = input(size:= "5", value := d.now).render
 
 
     val tab =
@@ -120,7 +122,7 @@ object DynPlot{
 
     var point = (0.0, 0.0)
 
-    var dyn = Matrix(a, b, c, d)
+    var dyn = Rx.unsafe{Matrix(a(), b(), c(), d())}
 
     def animateDyn(init: Point) = {
       point = init
@@ -134,8 +136,8 @@ object DynPlot{
           {
             val (x0, y0) = point
             ctx.moveTo(x0 * scale + width/2, height/2 - (y0 * scale) )
-            val x1 = dyn((x0, y0))._1
-            val y1 = dyn((x0, y0))._2
+            val x1 = dyn.now((x0, y0))._1
+            val y1 = dyn.now((x0, y0))._2
             val x = x0 + (x1 * step)
             val y = y0 + (y1 * step)
             // console.log(x)
@@ -175,31 +177,31 @@ object DynPlot{
 
     aI.onchange = (event: dom.Event) => {
       stop()
-      a = aI.value.toDouble
+      a() = aI.value.toDouble
       init()
-      dyn = Matrix(a, b, c, d)
+//      dyn = Matrix(a, b, c, d)
     }
 
     bI.onchange = (event: dom.Event) => {
       stop()
-      b = bI.value.toDouble
+      b() = bI.value.toDouble
       init()
-      dyn = Matrix(a, b, c, d)
+//      dyn = Matrix(a, b, c, d)
     }
 
 
     cI.onchange = (event: dom.Event) => {
       stop()
-      c = cI.value.toDouble
+      c() = cI.value.toDouble
       init()
-      dyn = Matrix(a, b, c, d)
+//      dyn = Matrix(a, b, c, d)
     }
 
     dI.onchange = (event: dom.Event) => {
       stop()
-      d = dI.value.toDouble
+      d() = dI.value.toDouble
       init()
-      dyn = Matrix(a, b, c, d)
+//      dyn = Matrix(a, b, c, d)
     }
 
     pause.onclick = (_) => stop()
@@ -208,7 +210,7 @@ object DynPlot{
 
     clear.onclick = (_) => init()
 
-    dyn = Matrix(a, b, c, d)
+//    dyn = Matrix(a, b, c, d)
 
     lazy val rnd = new scala.util.Random
 
@@ -218,7 +220,7 @@ object DynPlot{
         val y0 = rnd.nextDouble() * 10 - 5
         // console.log(x0)
         // console.log(y0)
-        drawPath(solvSeq((x0, y0), dyn, step, length), scale)
+        drawPath(solvSeq((x0, y0), dyn.now, step, length), scale)
       }
     }
 

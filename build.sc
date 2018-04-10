@@ -12,7 +12,8 @@ trait CommonJsModule extends ScalaJSModule {
 
   def ivyDeps = Agg(
     ivy"org.scala-js::scalajs-dom::0.9.4",
-    ivy"com.lihaoyi::scalatags::0.6.7"
+    ivy"com.lihaoyi::scalatags::0.6.7",
+    ivy"com.lihaoyi::scalarx::0.3.2"
   )
 
   def pack() = T.command {
