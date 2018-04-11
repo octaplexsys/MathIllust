@@ -68,10 +68,10 @@ object DynPlot{
     }
 
 
-    var a = 1.0
-    var b = 0.0
-    var c = 0.0
-    var d = -1.0
+    var a = 0.0
+    var b = 1.0
+    var c = -1.0
+    var d = -0.1
 
     val scale = 100
     val step = 0.002

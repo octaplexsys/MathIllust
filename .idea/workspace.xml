@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a003871-8e96-4be2-ad82-d21837e251f2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/docs/dyn/out.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dyn/out.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/dyn/out.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dyn/out.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dyn/src/DynPlot.scala" beforeDir="false" afterPath="$PROJECT_DIR$/dyn/src/DynPlot.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/project/" />
@@ -22,8 +20,8 @@
       <file leaf-file-name="DynPlot.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dyn/src/DynPlot.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="174" column="20" selection-start-line="174" selection-start-column="20" selection-end-line="174" selection-end-column="20" />
+            <state relative-caret-position="-60">
+              <caret line="80" column="16" lean-forward="true" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
               <folding>
                 <element signature="e#13#35#0" expanded="true" />
               </folding>
@@ -196,8 +194,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dyn/src/DynPlot.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="174" column="20" selection-start-line="174" selection-start-column="20" selection-end-line="174" selection-end-column="20" />
+        <state relative-caret-position="-60">
+          <caret line="80" column="16" lean-forward="true" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
           <folding>
             <element signature="e#13#35#0" expanded="true" />
           </folding>
