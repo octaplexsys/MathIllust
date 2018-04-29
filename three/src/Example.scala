@@ -8,47 +8,65 @@ import org.scalajs.dom._
 import org.scalajs.dom.html.Input
 import scalatags.JsDom.all._
 
+import scala.math._
+
 import scala.scalajs.js.annotation._
+
+import scala.scalajs.js
 
 @JSExportTopLevel("ThreeExample")
 object Example{
-  val scene = new Scene()
 
-  val geometry = new Geometry()
-  geometry.vertices.push(
-    new Vector3( -10,  10, 0 ),
-	  new Vector3( -10, -10, 0 ),
-	  new Vector3(  10, -10, 0 )
-  )
 
-  geometry.faces.push( new Face3( 0, 1, 2 ) )
+  @JSExport
+  val  cylinder: js.Function2[Double, Double, Vector3] = (u, v) =>
+    new Vector3(sin(2 * Pi * u), cos(2 * Pi *u), v)
 
-  geometry.computeBoundingSphere()
+    val scene = new Scene()
+    var camera = new PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 )
+
+    val renderer = new WebGLRenderer();
+
+    @JSExport
+    val geometry = new Geometry()
+
+    val verts = Vector(
+      new Vector3( 1,  0, 0 ),
+  	  new Vector3( 0, 1, 0 ),
+  	  new Vector3( 0, -1, 0 ),
+      new Vector3( 0,  0,  1)
+    )
+
 
   @JSExport
   def main(): Unit = {
 
     val jsDiv = document.getElementById("js-div")
 
-    val scene = new Scene()
-    var camera = new PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 )
-
-    val renderer = new WebGLRenderer();
     renderer.setSize( window.innerWidth, window.innerHeight )
     jsDiv.appendChild( renderer.domElement )
 
-    val geometry = new BoxGeometry( 1, 1, 1 );
+    geometry.vertices.push(verts: _*)
+    val face1 = new Face3(0, 1, 2)
+    val face2 = new Face3(1, 2, 3)
+    face1.normal = new Vector3(0, 0, 1)
+    face2.normal = new Vector3(1, 0, 0)
+    geometry.faces.push(face1)
+    geometry.faces.push(face2)
+
+    // geometry.computeVertexNormals();
+
     val material = new MeshBasicMaterial()
     material.color = new Color(Integer.parseInt("00ff00", 16))
-    var cube = new Mesh( geometry, material );
-    scene.add( cube );
+    var pic = new Mesh( geometry, material );
+    scene.add( pic );
 
     camera.position.z = 5;
 
     def animate(ts: Double) : Unit =  {
 	      window.requestAnimationFrame( animate )
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01
+        pic.rotation.x += 0.01;
+        pic.rotation.y += 0.01
 	      renderer.render( scene, camera )
       }
       window.requestAnimationFrame(animate)
