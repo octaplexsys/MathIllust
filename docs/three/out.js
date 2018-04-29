@@ -1380,24 +1380,44 @@ $c_Lexample_Example$.prototype.geometry__Lorg_denigma_threejs_Geometry = (functi
 $c_Lexample_Example$.prototype.main__V = (function() {
   var jsDiv = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().getElementById("js-div");
   var scene = new $g.THREE.Scene();
-  var camera = new $g.THREE.PerspectiveCamera(75.0, ($uD($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().innerWidth) / $uD($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().innerHeight)), 0.1, 1000.0);
+  var camera = $m_sr_ObjectRef$().create__O__sr_ObjectRef(new $g.THREE.PerspectiveCamera(75.0, ($uD($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().innerWidth) / $uD($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().innerHeight)), 0.1, 1000.0));
   var renderer = new $g.THREE.WebGLRenderer();
   renderer.setSize($uD($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().innerWidth), $uD($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().innerHeight));
   jsDiv.appendChild(renderer.domElement);
   var geometry = new $g.THREE.BoxGeometry(1.0, 1.0, 1.0);
   var material = new $g.THREE.MeshBasicMaterial();
   material.color = new $g.THREE.Color($m_jl_Integer$().parseInt__T__I__I("00ff00", 16));
-  var cube = new $g.THREE.Mesh(geometry, material);
-  scene.add(cube);
-  camera.position.z = 5.0;
-  var ev$1 = cube.rotation;
-  ev$1.x = ($uD(ev$1.x) + 0.3);
-  var ev$2 = cube.rotation;
-  ev$2.y = ($uD(ev$2.y) + 0.3);
-  renderer.render(scene, camera)
+  var cube = $m_sr_ObjectRef$().create__O__sr_ObjectRef(new $g.THREE.Mesh(geometry, material));
+  scene.add(cube.elem$1);
+  camera.elem$1.position.z = 5.0;
+  $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().requestAnimationFrame((function(scene$1, camera$1, renderer$1, cube$1) {
+    return (function(arg1$2) {
+      var arg1 = $uD(arg1$2);
+      $m_Lexample_Example$().example$Example$$$anonfun$main$2__D__Lorg_denigma_threejs_Scene__sr_ObjectRef__Lorg_denigma_threejs_WebGLRenderer__sr_ObjectRef__V(arg1, scene$1, camera$1, renderer$1, cube$1)
+    })
+  })(scene, camera, renderer, cube))
 });
 $c_Lexample_Example$.prototype.$$js$exported$meth$main__O = (function() {
   this.main__V()
+});
+$c_Lexample_Example$.prototype.example$Example$$$anonfun$main$1__D__Lorg_denigma_threejs_Scene__sr_ObjectRef__Lorg_denigma_threejs_WebGLRenderer__sr_ObjectRef__V = (function(ts, scene$1, camera$1, renderer$1, cube$1) {
+  this.animate$1__p1__D__Lorg_denigma_threejs_Scene__sr_ObjectRef__Lorg_denigma_threejs_WebGLRenderer__sr_ObjectRef__V(ts, scene$1, camera$1, renderer$1, cube$1)
+});
+$c_Lexample_Example$.prototype.animate$1__p1__D__Lorg_denigma_threejs_Scene__sr_ObjectRef__Lorg_denigma_threejs_WebGLRenderer__sr_ObjectRef__V = (function(ts, scene$1, camera$1, renderer$1, cube$1) {
+  $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().requestAnimationFrame((function(scene$1, camera$1, renderer$1, cube$1) {
+    return (function(arg1$2) {
+      var arg1 = $uD(arg1$2);
+      $m_Lexample_Example$().example$Example$$$anonfun$main$1__D__Lorg_denigma_threejs_Scene__sr_ObjectRef__Lorg_denigma_threejs_WebGLRenderer__sr_ObjectRef__V(arg1, scene$1, camera$1, renderer$1, cube$1)
+    })
+  })(scene$1, camera$1, renderer$1, cube$1));
+  var ev$1 = cube$1.elem$1.rotation;
+  ev$1.x = ($uD(ev$1.x) + 0.01);
+  var ev$2 = cube$1.elem$1.rotation;
+  ev$2.y = ($uD(ev$2.y) + 0.01);
+  renderer$1.render(scene$1, camera$1.elem$1)
+});
+$c_Lexample_Example$.prototype.example$Example$$$anonfun$main$2__D__Lorg_denigma_threejs_Scene__sr_ObjectRef__Lorg_denigma_threejs_WebGLRenderer__sr_ObjectRef__V = (function(ts, scene$1, camera$1, renderer$1, cube$1) {
+  this.animate$1__p1__D__Lorg_denigma_threejs_Scene__sr_ObjectRef__Lorg_denigma_threejs_WebGLRenderer__sr_ObjectRef__V(ts, scene$1, camera$1, renderer$1, cube$1)
 });
 $c_Lexample_Example$.prototype.init___ = (function() {
   $c_O.prototype.init___.call(this);
@@ -4201,6 +4221,37 @@ var $d_sr_IntRef = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_sr_IntRef.prototype.$classData = $d_sr_IntRef;
+/** @constructor */
+function $c_sr_ObjectRef() {
+  $c_O.call(this);
+  this.elem$1 = null
+}
+$c_sr_ObjectRef.prototype = new $h_O();
+$c_sr_ObjectRef.prototype.constructor = $c_sr_ObjectRef;
+/** @constructor */
+function $h_sr_ObjectRef() {
+  /*<skip>*/
+}
+$h_sr_ObjectRef.prototype = $c_sr_ObjectRef.prototype;
+$c_sr_ObjectRef.prototype.elem__O = (function() {
+  return this.elem$1
+});
+$c_sr_ObjectRef.prototype.toString__T = (function() {
+  return $m_sjsr_RuntimeString$().valueOf__O__T(this.elem__O())
+});
+$c_sr_ObjectRef.prototype.init___O = (function(elem) {
+  this.elem$1 = elem;
+  $c_O.prototype.init___.call(this);
+  return this
+});
+var $d_sr_ObjectRef = new $TypeData().initClass({
+  sr_ObjectRef: 0
+}, false, "scala.runtime.ObjectRef", {
+  sr_ObjectRef: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_sr_ObjectRef.prototype.$classData = $d_sr_ObjectRef;
 function $isArrayOf_jl_Boolean(obj, depth) {
   return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.jl_Boolean)))
 }
@@ -5894,6 +5945,41 @@ var $d_sr_Nothing$ = new $TypeData().initClass({
   O: 1,
   Ljava_io_Serializable: 1
 });
+/** @constructor */
+function $c_sr_ObjectRef$() {
+  $c_O.call(this)
+}
+$c_sr_ObjectRef$.prototype = new $h_O();
+$c_sr_ObjectRef$.prototype.constructor = $c_sr_ObjectRef$;
+/** @constructor */
+function $h_sr_ObjectRef$() {
+  /*<skip>*/
+}
+$h_sr_ObjectRef$.prototype = $c_sr_ObjectRef$.prototype;
+$c_sr_ObjectRef$.prototype.create__O__sr_ObjectRef = (function(elem) {
+  return new $c_sr_ObjectRef().init___O(elem)
+});
+$c_sr_ObjectRef$.prototype.init___ = (function() {
+  $c_O.prototype.init___.call(this);
+  $n_sr_ObjectRef$ = this;
+  return this
+});
+var $d_sr_ObjectRef$ = new $TypeData().initClass({
+  sr_ObjectRef$: 0
+}, false, "scala.runtime.ObjectRef$", {
+  sr_ObjectRef$: 1,
+  O: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_sr_ObjectRef$.prototype.$classData = $d_sr_ObjectRef$;
+var $n_sr_ObjectRef$ = (void 0);
+function $m_sr_ObjectRef$() {
+  if ((!$n_sr_ObjectRef$)) {
+    $n_sr_ObjectRef$ = new $c_sr_ObjectRef$().init___()
+  };
+  return $n_sr_ObjectRef$
+}
 /** @constructor */
 function $c_Ljava_io_OutputStream() {
   $c_O.call(this)
