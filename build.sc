@@ -17,7 +17,7 @@ trait CommonJsModule extends ScalaJSModule {
 
   def pack() = T.command {
     def js = fastOpt()
-    def targ = pwd / "docs" / dyn.artifactName()
+    def targ = pwd / "docs" / artifactName()
     cp.over(js.path, targ / "out.js")
     cp.over(js.path / up / "out.js.map", targ / "out.js.map")
     js
@@ -25,3 +25,5 @@ trait CommonJsModule extends ScalaJSModule {
 }
 
 object dyn extends CommonJsModule
+
+object three extends CommonJsModule
